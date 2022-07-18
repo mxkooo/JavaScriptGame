@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Oswald:wght@500&family=Red+Hat+Mono&family=Roboto+Mono:ital,wght@0,300;1,500&family=Roboto+Serif:opsz,wght@8..144,300&display=swap');
+body{
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(46,46,46);
+    color: rgb(141, 155, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    font-family: 'Roboto', sans-serif;
+}
+#game{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+}
+.card{
+    width: 200px;
+    height: 191px;
+    background-color: rgb(0, 0, 0);
+    border-left: solid rgb(255, 255, 255) 10px;
+    border-right: solid rgb(255, 255, 255) 10px;
+    border-top: solid rgb(255, 255, 255) 10px;
+    border-bottom: solid rgb(255, 255, 255) 10px;
+    text-align: left;
+    font-size: 115px;
+    margin: 15px;
+    padding: 12px;
+    line-height: 200px;
+}
+
+
+
+.card:hover{
+    cursor: pointer;
+}
+.first-button:hover, .second-button:hover{
+    cursor: pointer;
+}
+.first-button{
+    background-color: rgb(255, 255, 255);
+}
+.second-button{
+    background-color: rgb(255, 255, 255);
+}
+.first-button, .second-button{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.genre-title{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 27px;
+    padding: 7px;
+    margin: 8px;
+    width: 276px;
+}
+
+.correct-answer{
+    background-color: green;
+}
+.wrong-answer{
+    background-color: red;
+}
