@@ -120,6 +120,19 @@ const gameCategories = [
   },
 ]
 
+function get_number_from_level(level)
+{
+  if (level == 'easy') { 
+    return 20 
+  } 
+  if (level == 'medium') { 
+    return 50 
+  } 
+  if (level == 'hard') { 
+    return 100 
+  }
+}
+
 function giveCategory(category) {
   const column = document.createElement('div')
   column.classList.add('genre-column')
@@ -136,15 +149,7 @@ function giveCategory(category) {
     card.classList.add('card')
     column.append(card)
 
-    if (question.level == 'easy') {
-      card.innerHTML = 20
-    }
-    if (question.level == 'medium') {
-      card.innerHTML = 50
-    }
-    if (question.level == 'hard') {
-      card.innerHTML = 100
-    }
+    card.innerHTML = get_number_from_level(question.level)
 
     card.setAttribute('data-question', question.question)
     card.setAttribute('data-answer-1', question.answers[0])
