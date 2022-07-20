@@ -133,6 +133,12 @@ function get_number_from_level(level)
   }
 }
 
+function sort_questions(questions) {
+  questions.sort(function(a, b){
+    return get_number_from_level(a.level) - get_number_from_level(b.level);
+  });
+}
+
 function giveCategory(category) {
   const column = document.createElement('div')
   column.classList.add('genre-column')
@@ -144,6 +150,8 @@ function giveCategory(category) {
   column.append(genreTitle)
   game.append(column)
 
+  sort_questions(category.questions)
+  
   category.questions.forEach((question) => {
     const card = document.createElement('div')
     card.classList.add('card')
