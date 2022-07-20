@@ -122,15 +122,12 @@ const gameCategories = [
 
 function get_number_from_level(level)
 {
-  if (level == 'easy') { 
-    return 20 
-  } 
-  if (level == 'medium') { 
-    return 50 
-  } 
-  if (level == 'hard') { 
-    return 100 
+  const values = {'easy':20,'medium':50,'hard':100}
+  if (level in values) { 
+    return values[level] 
   }
+  alert('Error, please check console');
+  throw 'Provided level:('+typeof(level)+':"'+level+'") is not supported in values';
 }
 
 function sort_questions(questions) {
